@@ -13,10 +13,10 @@ function install(callback)
 	if (location.href.indexOf("https://developer.apple.com/devcenter/mac/loadredemptioncode.action") != 0 ) return;
 	
 	var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
-	
-    var cb = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+
+	var cb = document.createElement("script");
 	cb.type = "text/javascript";
 	cb.textContent = "jQuery.noConflict();(" + callback.toString() + ")(jQuery);";
 	script.addEventListener('load', function() 
